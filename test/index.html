@@ -7,7 +7,13 @@
   <script src="../build/build.js"></script>
   <script>
     var sso = require("sso-check");
-    sso("http://localhost:8001/test", function(err, loggedIn) {
+
+    var options = {
+      remote: "http://localhost:8001/test",
+      swf: "../build/fs-components-easyXDM/easyxdm.swf"
+    }
+
+    sso(options, function(err, loggedIn) {
       console.log(loggedIn ? "User is logged in" : "User is not logged in");
     });
   </script>
