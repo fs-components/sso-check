@@ -1,0 +1,15 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Simple SSO check</title>
+</head>
+<body>
+  <script src="../build/build.js"></script>
+  <script>
+    var sso = require("sso-check");
+    sso("http://localhost:8000", function(err, loggedIn) {
+      alert(loggedIn ? "User is logged in" : "User is not logged in");
+    });
+  </script>
+</body>
+</html>

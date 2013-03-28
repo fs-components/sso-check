@@ -1,0 +1,15 @@
+{
+  "name": "sso-check",
+  "repo": "fs-webdev/sso-check",
+  "description": "Simple SSO check",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "fs-components/easyXDM": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
