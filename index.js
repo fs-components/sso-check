@@ -3,12 +3,15 @@
  */
 var xdm = require("easyXDM");
 
-module.exports = function(domain, cb) {
+module.exports = function(options, cb) {
 
-  var rpc = new xdm.Rpc({
-    remote: domain
-  },
-  {
+  if(typeof options === "string") {
+    options = {
+      remote: options
+    };
+  };
+
+  var rpc = new xdm.Rpc(options, {
     remote: {
       loggedIn: {
         // Stub the remote call
